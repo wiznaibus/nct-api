@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artists",
+  "info": {
+    "name": "Artist",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "cover_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "debut_date": {
+      "type": "date"
+    },
+    "albums": {
+      "via": "artists",
+      "collection": "album"
+    },
+    "songs": {
+      "via": "artists",
+      "collection": "song"
+    },
+    "performing_artists": {
+      "via": "artist",
+      "collection": "performing-artist"
+    },
+    "primary_color": {
+      "type": "string"
+    },
+    "secondary_color": {
+      "type": "string"
+    },
+    "unit": {
+      "via": "artists",
+      "model": "unit"
+    }
+  }
+}

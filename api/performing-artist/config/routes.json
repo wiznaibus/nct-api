@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/performing-artists",
+      "handler": "performing-artist.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/performing-artists/count",
+      "handler": "performing-artist.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/performing-artists/:id",
+      "handler": "performing-artist.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/performing-artists",
+      "handler": "performing-artist.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/performing-artists/:id",
+      "handler": "performing-artist.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/performing-artists/:id",
+      "handler": "performing-artist.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

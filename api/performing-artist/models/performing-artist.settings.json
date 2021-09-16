@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performing_artists",
+  "info": {
+    "name": "Performing artist",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "cover_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "debut_date": {
+      "type": "date"
+    },
+    "artist": {
+      "via": "performing_artists",
+      "model": "artist"
+    },
+    "member": {
+      "via": "performing_artists",
+      "model": "member"
+    },
+    "albums": {
+      "via": "performing_artists",
+      "collection": "album"
+    },
+    "songs": {
+      "via": "performing_artists",
+      "collection": "song"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "languages",
+  "info": {
+    "name": "Language",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "albums": {
+      "via": "languages",
+      "collection": "album"
+    },
+    "songs": {
+      "via": "languages",
+      "collection": "song"
+    }
+  }
+}

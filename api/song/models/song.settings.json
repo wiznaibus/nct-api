@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "songs",
+  "info": {
+    "name": "Song",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "track_number": {
+      "type": "integer"
+    },
+    "album": {
+      "via": "songs",
+      "model": "album"
+    },
+    "artists": {
+      "via": "songs",
+      "collection": "artist",
+      "dominant": true
+    },
+    "languages": {
+      "collection": "language",
+      "via": "songs",
+      "dominant": true
+    },
+    "performing_artists": {
+      "via": "songs",
+      "collection": "performing-artist",
+      "dominant": true
+    },
+    "related_songs": {
+      "collection": "song",
+      "via": "related_songs2",
+      "dominant": true
+    },
+    "related_songs2": {
+      "collection": "song",
+      "via": "related_songs"
+    },
+    "links": {
+      "via": "songs",
+      "collection": "link"
+    },
+    "duplicate": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

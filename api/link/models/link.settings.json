@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "links",
+  "info": {
+    "name": "Link",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "link_type": {
+      "model": "link-type",
+      "via": "links"
+    },
+    "album": {
+      "model": "album",
+      "via": "links"
+    },
+    "songs": {
+      "via": "links",
+      "collection": "song",
+      "dominant": true
+    }
+  }
+}

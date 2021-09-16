@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "release_types",
+  "info": {
+    "name": "Release type",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "discography_type": {
+      "model": "discography-type",
+      "via": "release_types"
+    },
+    "albums": {
+      "via": "release_type",
+      "collection": "album"
+    }
+  }
+}

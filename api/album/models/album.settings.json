@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "albums",
+  "info": {
+    "name": "Album",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "cover_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "release_date": {
+      "type": "date"
+    },
+    "release_type": {
+      "model": "release-type",
+      "via": "albums"
+    },
+    "artists": {
+      "via": "albums",
+      "collection": "artist",
+      "dominant": true
+    },
+    "performing_artists": {
+      "via": "albums",
+      "collection": "performing-artist",
+      "dominant": true
+    },
+    "songs": {
+      "via": "album",
+      "collection": "song"
+    },
+    "languages": {
+      "collection": "language",
+      "via": "albums",
+      "dominant": true
+    },
+    "links": {
+      "via": "album",
+      "collection": "link"
+    }
+  }
+}
