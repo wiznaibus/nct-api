@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_meta_links",
+  "info": {
+    "name": "Link",
+    "icon": "infinity"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "link_type": {
+      "model": "link-type"
+    }
+  }
+}

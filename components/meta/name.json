@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_meta_names",
+  "info": {
+    "name": "Name",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "name_romanized": {
+      "type": "string"
+    }
+  }
+}
