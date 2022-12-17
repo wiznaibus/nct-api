@@ -43,6 +43,10 @@
       "collection": "discography-type",
       "via": "units",
       "dominant": true
+    },
+    "leader": {
+      "model": "member",
+      "via": "leads"
     }
   }
 }

@@ -48,13 +48,14 @@
       "collection": "song",
       "via": "related_songs"
     },
-    "links": {
-      "via": "songs",
-      "collection": "link"
-    },
     "duplicate": {
       "type": "boolean",
       "default": false
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "meta.link"
     }
   }
 }

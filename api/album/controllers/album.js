@@ -10,6 +10,17 @@ const { sanitizeEntity } = require('strapi-utils');
 module.exports = {
     async find(ctx) {
         let entities;
+
+        /*
+        'songs',
+        'songs.artists',
+        'songs.performing_artists',
+        'songs.performing_artists.artist',
+        'songs.languages',
+        'songs.links',
+        'songs.links.link_type',
+        */
+
         if (ctx.query._q) {
             entities = await strapi.services.album.search(ctx.query, [
                 'release_type',
@@ -18,13 +29,6 @@ module.exports = {
                 'performing_artists',
                 'performing_artists.artist',
                 'performing_artists.member',
-                'songs',
-                'songs.artists',
-                'songs.performing_artists',
-                'songs.performing_artists.artist',
-                'songs.languages',
-                'songs.links',
-                'songs.links.link_type',
                 'languages',
                 'links',
                 'links.link_type'
@@ -37,13 +41,6 @@ module.exports = {
                 'performing_artists',
                 'performing_artists.artist',
                 'performing_artists.member',
-                'songs',
-                'songs.artists',
-                'songs.performing_artists',
-                'songs.performing_artists.artist',
-                'songs.languages',
-                'songs.links',
-                'songs.links.link_type',
                 'languages',
                 'links',
                 'links.link_type'

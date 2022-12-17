@@ -35,6 +35,39 @@
     },
     "sort_order": {
       "type": "integer"
+    },
+    "stage_name": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.name"
+    },
+    "real_name": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.name"
+    },
+    "korean_name": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.name"
+    },
+    "birth_date": {
+      "type": "date"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "sns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "meta.link"
+    },
+    "emoji": {
+      "type": "string"
+    },
+    "leads": {
+      "via": "leader",
+      "collection": "unit"
     }
   }
 }

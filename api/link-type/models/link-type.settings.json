@@ -16,10 +16,6 @@
     },
     "slug": {
       "type": "string"
-    },
-    "links": {
-      "via": "link_type",
-      "collection": "link"
     }
   }
 }
