@@ -1,3 +1,3 @@
 # NCT API
 
-API structure for NCT Discography
+API structure for NCT Discography.
