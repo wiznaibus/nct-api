@@ -56,6 +56,11 @@
       "type": "component",
       "repeatable": true,
       "component": "meta.link"
+    },
+    "title_track": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
